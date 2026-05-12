@@ -1,0 +1,26 @@
+{
+  "name": "Agrocity",
+  "short_name": "Agrocity",
+  "description": "Agricultural Investment Platform",
+  "start_url": "/agrocity/splash",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1f0d",
+  "theme_color": "#0d1f0d",
+  "icons": [
+    {
+      "src": "/icons/agrocity-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/agrocity-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "lifestyle"],
+  "prefer_related_applications": false
+}

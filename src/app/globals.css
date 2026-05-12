@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* TERRENOS Brand */
+  --color-terrenos-black: #0a0a0a;
+  --color-terrenos-gold: #d4af37;
+  --color-terrenos-gold-light: #f0d060;
+  --color-terrenos-gold-dark: #b8960c;
+  --color-terrenos-surface: #111111;
+  --color-terrenos-surface2: #1a1a1a;
+  --color-terrenos-border: #2a2a2a;
+
+  /* BLOOMPAY Brand */
+  --color-bloom-navy: #0a1628;
+  --color-bloom-royal: #1a3a6b;
+  --color-bloom-blue: #2563eb;
+  --color-bloom-gold: #c9a227;
+  --color-bloom-gold-light: #e8c547;
+  --color-bloom-surface: #0f1f3d;
+  --color-bloom-surface2: #162848;
+  --color-bloom-border: #1e3a5f;
+
+  /* AGROCITY Brand */
+  --color-agro-dark: #0d1f0d;
+  --color-agro-deep: #1a3a1a;
+  --color-agro-green: #2d7a2d;
+  --color-agro-light: #4ade80;
+  --color-agro-mint: #86efac;
+  --color-agro-surface: #0f2a0f;
+  --color-agro-surface2: #163316;
+  --color-agro-border: #1e4a1e;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-gold {
+    background: rgba(212, 175, 55, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .glass-bloom {
+    background: rgba(37, 99, 235, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+  }
+
+  .glass-agro {
+    background: rgba(45, 122, 45, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(45, 122, 45, 0.2);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #d4af37 0%, #f0d060 50%, #b8960c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-bloom {
+    background: linear-gradient(135deg, #2563eb 0%, #c9a227 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-agro {
+    background: linear-gradient(135deg, #2d7a2d 0%, #4ade80 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 60px rgba(212, 175, 55, 0.1);
+  }
+
+  .glow-bloom {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3), 0 0 60px rgba(37, 99, 235, 0.1);
+  }
+
+  .glow-agro {
+    box-shadow: 0 0 20px rgba(45, 122, 45, 0.3), 0 0 60px rgba(45, 122, 45, 0.1);
+  }
+
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+  }
+
+  .safe-pb {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 16px));
+  }
+
+  .nav-blur {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .nav-blur-bloom {
+    background: rgba(10, 22, 40, 0.9);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(37, 99, 235, 0.15);
+  }
+
+  .nav-blur-agro {
+    background: rgba(13, 31, 13, 0.9);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(45, 122, 45, 0.15);
+  }
+
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.06) 25%,
+      rgba(255, 255, 255, 0.12) 50%,
+      rgba(255, 255, 255, 0.06) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s infinite;
+  }
+
+  @keyframes skeleton-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
